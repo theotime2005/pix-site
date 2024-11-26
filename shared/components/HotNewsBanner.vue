@@ -1,7 +1,7 @@
 <template>
   <div v-if="isOpen && hotNews" class="hot-news">
     <prismic-rich-text :field="hotNews" :serializer="customPrismicRichTextSerializer" />
-    <img class="close" src="/images/close-icon.svg" alt="Fermer" @click.stop="closeBanner" />
+    <button><img class="close" src="/images/close-icon.svg" alt="Fermer" @click.stop="closeBanner" /></button>
   </div>
 </template>
 
