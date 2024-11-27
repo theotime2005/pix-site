@@ -1,20 +1,31 @@
 <template>
   <section class="persona__header">
     <div class="persona-header__wrapper">
-      <a v-if="backLink" :href="backLink" class="persona-header__back-button">
-        <span>{{ $t('back') }}</span>
+      <a v-if="backLinkUrl" :href="backLinkUrl" class="persona-header__back-button">
+        <span>{{ t('back') }}</span>
       </a>
       <nuxt-img v-if="icon" class="persona-header__icon" :src="icon" alt="" />
       <h1 class="persona-header__title">
         {{ title }}
       </h1>
+      <input
+        v-if="withSearch"
+        class="persona-header__search-input"
+        type="text"
+        :placeholder="t('support.faq.search-placeholder')"
+        @keyup="$emit('handleSearch', $event.target.value)"
+      />
     </div>
   </section>
 </template>
 
 <script setup>
+const { t } = useNuxtApp().$i18n;
+
+defineEmits(['handleSearch']);
+
 defineProps({
-  backLink: {
+  backLinkUrl: {
     type: String,
     default: null,
   },
@@ -26,7 +37,14 @@ defineProps({
     type: String,
     required: true,
   },
+  withSearch: {
+    type: Boolean,
+    default: false,
+  },
 });
+
+const searchInput = ref('');
+provide('searchInput', searchInput);
 </script>
 
 <style lang="scss" scoped>
@@ -81,6 +99,28 @@ defineProps({
     font-size: 1.5rem;
     line-height: 0.3em;
     margin-right: 0.5rem;
+  }
+}
+
+.persona-header__search-input {
+  width: min(100%, 25em);
+  margin-top: 1.5em;
+  padding: 1em 1.5em 1em 3em;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  border-radius: 2em;
+  background-image: url('/images/search-icon.svg');
+  background-size: auto calc(100% - 1.5em);
+  background-repeat: no-repeat;
+  background-position: 1em center;
+
+  &:hover {
+    border-color: $grey-60;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+  &:focus {
+    border-color: $grey-200;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4);
   }
 }
 </style>

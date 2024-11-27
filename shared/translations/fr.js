@@ -79,6 +79,9 @@ export default {
     faq: {
       'contact-title': 'Vous ne trouvez pas la réponse à votre question ?',
       'contact-cta': 'Contacter le support',
+      'search-placeholder': 'Rechercher parmi les titres des articles',
+      'no-result': 'Aucun résultat trouvé pour « {searchInput} »',
+      'results-count': '{count} résultats',
     },
     meta: {
       title: 'Centre d’aide et contact',

@@ -78,6 +78,9 @@ export default {
     faq: {
       'contact-title': "Can't find the answer to your question?",
       'contact-cta': 'Contact the support',
+      'search-placeholder': 'Search among the posts titles',
+      'no-result': 'No results found for « {searchInput} »',
+      'results-count': '{count} result(s) containing « {searchInput} »',
     },
     meta: {
       title: 'Help Center and Contact',

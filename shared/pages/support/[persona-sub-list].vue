@@ -3,7 +3,7 @@
     <support-header
       :title="data.currentPersona.name[0].text"
       :icon="data.currentPersona.icon.url"
-      :back-link="backLink"
+      :back-link-url="backLink"
     />
     <h2 class="personas-sub-list__subtitle">
       {{ data.currentPersona.sub_persona_title[0].text }}

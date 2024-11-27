@@ -3,7 +3,7 @@
     <support-header
       :title="data.currentPersona.faq_page_title[0].text"
       :icon="data.currentPersona.icon.url"
-      :back-link="backLink"
+      :back-link-url="backLink"
     />
     <section class="faq-post__content-wrapper">
       <h1 class="faq-post__title">{{ data.content.title[0].text }}</h1>
