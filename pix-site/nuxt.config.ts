@@ -46,3 +46,6 @@ export default async () => {
 if (!process.env.SITE) {
   throw new Error('Missing SITE environment variable');
 }
+if (!process.env.SITE_DOMAIN) {
+  throw new Error('Missing SITE_DOMAIN environment variable');
+}

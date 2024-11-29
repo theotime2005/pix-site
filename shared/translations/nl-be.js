@@ -77,8 +77,11 @@ export default {
       'required-info': "Tous les champs marqués d'une <span>*</span> sont obligatoires",
     },
     faq: {
-      'contact-title': 'Vous ne trouvez pas la réponse à votre question ?',
-      'contact-cta': 'Contacter le support',
+      'contact-title': 'Kun je het antwoord op je vraag niet vinden?',
+      'contact-cta': 'Contact opnemen met ondersteuning',
+      'search-placeholder': 'Zoek tussen de titels van de berichten',
+      'no-result': 'Geen resultaten gevonden voor « {searchInput} »',
+      'results-count': '{count} resultaat(en) met « {searchInput} »',
     },
     meta: {
       title: 'Helpcentrum & Contact',
