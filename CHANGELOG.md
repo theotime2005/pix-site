@@ -1,5 +1,11 @@
 # pix-site Changelog
 
+## v5.16.0 (02/12/2024)
+
+
+### :rocket: Amélioration
+- [#728](https://github.com/1024pix/pix-site/pull/728) [FEATURE] Support : ajout d'un filtre de recherche dans les pages de FAQ (PIX-15432).
+
 ## v5.15.0 (11/10/2024)
 
 
